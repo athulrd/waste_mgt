@@ -16,6 +16,16 @@
           } 
         } 
 
+ public function bin_statusdata($data) 
+        { 
+         if ($this->db->update("binstatustbl", $data))
+          { 
+            return true; 
+          } 
+        } 
+
+
+
 }
 ?> 
 

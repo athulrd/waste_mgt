@@ -90,6 +90,7 @@ $route['menu/trial'] = 'menuController/trial';
 $route['datacollection/datatablegetconnectivitydata'] = 'menuController/datatablegetconnectivitydata';
 
 $route['view/trial'] = 'viewController/trial';
+
 $route['datacollection/bindatatablegetconnectivitydata'] = 'statusController/bindatatablegetconnectivitydata';
 
 

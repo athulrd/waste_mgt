@@ -280,6 +280,47 @@ public function datatablegetconnectivitystatusdata()
 
 
 
+//http://192.168.1.9/waste/index.php/menuController/binstatusdata?status=2&binno=1
+      
+
+
+      public function binstatusdata()
+  {
+    //$this->load->helper('url'); 
+        //$this->load->view('menu/addassignbinmember'); 
+        //$bin_number = $this->input->post('bin_number');  
+       // $members[] = $this->input->post('members'); 
+        //print_r($members);
+       $binno = $this->input->get('binno');
+       echo $binno;
+       $status = $this->input->get('status'); 
+       echo $status;
+        $data = array(
+
+         'f_b_slno'=>$binno,
+         'binstatus'=>$status
+         );
+          echo json_encode($data);
+        
+        $bin_statusdata=$this->BinModel->bin_statusdata($data);
+
+        //$binmemberassign_data=$this->BinMemberAssignModel->binmemberassign_data($data);
+      //  echo json_encode($bin_data);
+        //echo json_encode($binmemberassign_data);
+
+        //$this->food_model->add_food($data);
+        /*$data = array( 
+            'username' => $username, 
+            'password' => $pass
+         ); 
+        $result=$this->UserModel->login($data);
+        $connectivity_data=$this->ConnectivityModel->connectivity_data();
+        $data['result']=$connectivity_data;*/
+  }
+
+
+
+
 
 
 
